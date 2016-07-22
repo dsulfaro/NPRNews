@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 
-	<head>
-		<div id = "header"> 
-      <h3 id = "title">CodePlayer</h3>
-        <div id = "buttons">
-          <button id = "html" class = "b">html</button>
-          <button id = "css" class = "b">css</button>
-          <button id = "js" class = "b">js</button>
-          <button id = "result" class = "b">result</button>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="container-fluid" id="main" ng-app="NPRTicker" ng-controller="getNews">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h1 id="title">News from npr:</h1>
+              <div id="outer">
+                <div id="inner">
+                    <div id="ticker">
+                    <div class="temp"></div>
+                      <div id="news">
+                          <ul>
+                            <li ng-repeat="headline in headlines" ng-if="story_index === $index">{{headline}}</li>
+                          </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <h3 id="ext">Find the rest on these stories <a href="http://www.npr.org/" target="_blank">here</a></h3>
+          </div>
         </div>
-        <button id = "run">Run</button>
     </div>
 
-    <div class = "clear"></div>
-      <div class = "codeContainer" id = "htmlContainer">
-        <div class = "codeLabel">HTML</div>
-        <textarea id = "htmlCode">Example Code</textarea>
-      </div>
-        <div class = "codeContainer" id = "cssContainer">
-          <div class = "codeLabel">CSS</div>
-          <textarea id = "cssCode">Example Code</textarea>
-        </div>
-          <div class = "codeContainer" id = "jsContainer">
-            <div class = "codeLabel">JS</div>
-            <textarea id = "jsCode">Example Code</textarea>
-          </div>
-
-            <div class = "codeContainer" id = "resultContainer">
-              <div class = "codeLabel">Result</div>
-              <iframe id = "result"></iframe>
-            </div>
+  </body>
 </html>
