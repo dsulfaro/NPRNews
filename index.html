@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 
 	<head>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-		<!-- Latest compiled JavaScript -->
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script src="main.js"></script>
-		<link rel="stylesheet" type="text/css" href="main.css">
-	</head>
-	<body>
-		<div class="container-fluid">
-  			<div id="title">
-    			<h1 id="titleVal">Super Special Awesome Wikipedia Viewer</h1>
-  			</div>
-  		<div id="random">
-    		<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="rand">
-      			<h3 id="randomVal">Take me to a random page!</h3>
-    		</a>
-  		</div>
-  		<h4 id="or"> -- or -- </h4>
-  		<div id="search">
-    		<form>
-      			<input type="text" id="searchVal" placeholder="Search for anything!">
-      			<button class="btn" id="go">Go!</button>
-    		</form>
-  		</div>
-		</div>
-	</body>
+		<div id = "header"> 
+      <h3 id = "title">CodePlayer</h3>
+        <div id = "buttons">
+          <button id = "html" class = "b">html</button>
+          <button id = "css" class = "b">css</button>
+          <button id = "js" class = "b">js</button>
+          <button id = "result" class = "b">result</button>
+        </div>
+        <button id = "run">Run</button>
+    </div>
+
+    <div class = "clear"></div>
+      <div class = "codeContainer" id = "htmlContainer">
+        <div class = "codeLabel">HTML</div>
+        <textarea id = "htmlCode">Example Code</textarea>
+      </div>
+        <div class = "codeContainer" id = "cssContainer">
+          <div class = "codeLabel">CSS</div>
+          <textarea id = "cssCode">Example Code</textarea>
+        </div>
+          <div class = "codeContainer" id = "jsContainer">
+            <div class = "codeLabel">JS</div>
+            <textarea id = "jsCode">Example Code</textarea>
+          </div>
+
+            <div class = "codeContainer" id = "resultContainer">
+              <div class = "codeLabel">Result</div>
+              <iframe id = "result"></iframe>
+            </div>
 </html>
